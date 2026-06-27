@@ -1,0 +1,15 @@
+name: Keep Hugging Face Alive
+
+on:
+  schedule:
+    # 每 14 分钟运行一次 (国际标准时间，分 时 天 月 周)
+    - cron: '*/14 * * * *'
+  workflow_dispatch: # 支持手动触发
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Memos URL
+        run: |
+          curl -I https://memos.nachaos.xyz/
