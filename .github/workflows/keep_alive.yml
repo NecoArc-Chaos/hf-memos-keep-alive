@@ -13,4 +13,4 @@ jobs:
         run: curl -I https://memos.nachaos.xyz || true # 允许失败继续
 
       - name: Ping Memos URL 2
-        run: curl -I https://memos.2410.space || true
+        run: curl -I https://memos.2410.cloud || true
