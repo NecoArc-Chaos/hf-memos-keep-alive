@@ -2,7 +2,7 @@ name: Keep Hugging Face Alive
 
 on:
   schedule:
-    - cron: '*/30 * * * *' # 调整为每30分钟一次，更稳定，不易被封
+    - cron: '*/14 * * * *' 
   workflow_dispatch:
 
 jobs:
