@@ -12,5 +12,4 @@ jobs:
       - name: Ping Memos URL
         run: |
           curl -I https://memos.nachaos.xyz/
-          curl -I 
-https://memos.2410.space/
+          curl -I https://memos.2410.space/
