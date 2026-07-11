@@ -2,14 +2,15 @@ name: Keep Hugging Face Alive
 
 on:
   schedule:
-    - cron: '*/14 * * * *'
+    - cron: '*/30 * * * *' # 调整为每30分钟一次，更稳定，不易被封
   workflow_dispatch:
 
 jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Ping Memos URL
-        run: |
-          curl -I https://memos.nachaos.xyz/
-          curl -I https://memos.2410.space/
+      - name: Ping Memos URL 1
+        run: curl -I https://memos.nachaos.xyz || true # 允许失败继续
+
+      - name: Ping Memos URL 2
+        run: curl -I https://memos.2410.space || true
